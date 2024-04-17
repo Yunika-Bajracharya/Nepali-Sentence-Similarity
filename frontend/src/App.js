@@ -54,11 +54,11 @@ function App() {
       </div>
       {result && (
         <div className="faq-item">
-          <h2>Most Similar Question & Answer</h2>
-          <h3>Question:</h3>
-          <p>{result.question}</p>
-          <h3>Answer:</h3>
-          <p>{result.answer}</p>
+          <h7>
+            <i>Most Similar Question from FAQ list:</i>
+          </h7>
+          <h3 className="color-text">{result.question}</h3>
+          <h4 className="color-text">{result.answer}</h4>
           <p>Similarity Score: {result.score}</p>
         </div>
       )}
@@ -67,7 +67,7 @@ function App() {
         {faqList.map((faq, index) => (
           <div key={index} className="faq-item">
             <p className="faq-question">● {faq.question}</p>
-            <p className="faq-answer"> - {faq.answer}</p>
+            <p className="faq-answer">➔ {faq.answer}</p>
           </div>
         ))}
       </div>

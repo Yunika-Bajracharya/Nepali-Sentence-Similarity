@@ -64,3 +64,7 @@ body {
   font-weight: bolder;
   font-size: larger;
 }
+
+.color-text {
+  color: rgb(114, 179, 244);
+}
