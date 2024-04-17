@@ -18,7 +18,9 @@ app.add_middleware(
     
 # Load the pre-trained multilingual sentence transformer model
 # model = SentenceTransformer("Yunika/muril-base-sentence-transformer")
-model = SentenceTransformer('sbastola/muril-base-cased-sentence-transformer-snli-nepali-2')
+# model = SentenceTransformer('sbastola/muril-base-cased-sentence-transformer-snli-nepali-2')
+model = SentenceTransformer('Yunika/sentence-transformer-nepali')
+
 
 # Sample FAQ data (Nepali language)
 faq_data = [
@@ -28,7 +30,7 @@ faq_data = [
     {"question": "How do you ensure the security and privacy of our data?", "answer": "We prioritize data security and privacy by implementing robust encryption protocols and stringent access controls."},
     {"question": "हाम्रो टोलीलाई तपाइँ प्रशिक्षण प्रदान गर्नुहुन्छ?", "answer": "हामी एआई समाधानहरूलाई प्रभावकारी रूपमा प्रयोग गर्न तपाईंको टोली आवश्यक सीप र ज्ञानले सुसज्जित छ भनी सुनिश्चित गर्न व्यापक प्रशिक्षण सत्रहरू र निरन्तर समर्थन प्रस्ताव गर्दछौं।"},
     {"question": "Do you offer custom AI solutions tailored to our specific business needs?", "answer": "Absolutely! We specialize in developing custom AI solutions tailored to meet the unique requirements and challenges of each client's business environment."},
-    {"question": "तपाईं AI एल्गोरिदम र निर्णय प्रक्रियाहरूमा पारदर्शिताको कुन स्तर प्रदान गर्नुहुन्छ?", "answer": "हामी पारदर्शितामा विश्वास गर्छौं र विश्वास र समझलाई बढाउँदै हाम्रा ग्राहकहरूलाई हाम्रो एआई एल्गोरिदम र निर्णय प्रक्रियाको विस्तृत व्याख्या प्रदान गर्छौं।"},
+    {"question": "तपाई AI एल्गोरिदम र निर्णय प्रक्रियाहरूमा पारदर्शिताको कुन स्तर प्रदान गर्नुहुन्छ?", "answer": "हामी पारदर्शितामा विश्वास गर्छौं र विश्वास र समझलाई बढाउँदै हाम्रा ग्राहकहरूलाई हाम्रो एआई एल्गोरिदम र निर्णय प्रक्रियाको विस्तृत व्याख्या प्रदान गर्छौं।"},
     {"question": "How do you handle updates and maintenance of AI systems post-deployment?", "answer": "We provide ongoing support, updates, and maintenance services to ensure the optimal performance and reliability of your AI systems even after deployment."},
     {"question": "के तपाईं सफल AI परियोजनाहरू पूरा गर्नुभएको उदाहरणहरू प्रदान गर्न सक्नुहुन्छ?", "answer": "पक्कै पनि! हामीले स्वास्थ्य सेवा, वित्त, र ई-वाणिज्य लगायत विभिन्न उद्योगहरूमा AI समाधानहरू सफलतापूर्वक लागू गरेका छौं। उदाहरणहरूमा व्यक्तिगत सिफारिस प्रणालीहरू, धोखाधडी पत्ता लगाउने एल्गोरिदमहरू, र चिकित्सा छवि विश्लेषण उपकरणहरू समावेश छन्।"},
     {"question": "What is your approach to project management and communication?", "answer": "We follow agile methodologies for project management and maintain regular communication with our clients through scheduled meetings, progress reports, and collaborative tools."}
