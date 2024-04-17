@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { ReactTransliterate } from "react-transliterate";
+
 import axios from "axios";
 import "./App.css";
 
@@ -7,6 +9,10 @@ function App() {
   const [result, setResult] = useState(null);
   const [faqList, setFaqList] = useState([]);
   const [darkMode, setDarkMode] = useState(true);
+
+  const [lang, setLang] = useState("ne");
+
+  const [transliteration, setTransliteration] = useState(false);
 
   useEffect(() => {
     // Fetch FAQ list from the backend on component mount
@@ -33,24 +39,61 @@ function App() {
     }
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   return (
     <div className={`container ${darkMode ? "dark-mode" : ""}`}>
       <div className="input-container">
         <h1>Welcome!</h1>
 
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search your query..."
-        />
-        <button className="input-button" onClick={handleSearch}>
-          Search
-        </button>
+        <div>
+          <button
+            className={`input-section-button ${
+              transliteration == false ? "blue" : ""
+            }`}
+            onClick={() => setTransliteration(false)}
+          >
+            Default
+          </button>
+
+          <button
+            className={`input-section-button ${
+              transliteration == true ? "blue" : ""
+            }`}
+            onClick={() => setTransliteration(true)}
+          >
+            Nepali Transliteration
+          </button>
+        </div>
+
+        <div className="input-section">
+          {transliteration == false && (
+            <input
+              type="text"
+              placeholder="Search your query..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          )}
+
+          {transliteration == true && (
+            <ReactTransliterate
+              // renderComponent={(props) => <input {...props} />}
+              value={query}
+              placeholder="Search in romanized Nepali..."
+              onChangeText={(text) => {
+                setQuery(text);
+              }}
+              lang={lang}
+            />
+          )}
+
+          <button className="input-button" onClick={handleSearch}>
+            Search
+          </button>
+        </div>
       </div>
       {result && (
         <div className="faq-item">

@@ -33,7 +33,7 @@ body {
 
 .dark-mode {
   background-color: #333;
-  color: #fff;
+  color: black;
 }
 
 .dark-mode .faq-item {
@@ -43,21 +43,28 @@ body {
 }
 
 .input-container input {
-  width: calc(100% - 115px);
+  width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: black;
 }
 
 .input-button {
-  width: 80px;
+  width: 100%;
   padding: 10px;
-  margin-left: 10px;
-  border: none;
+  margin-top: 10px;
+  border: 1px solid gray;
   border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
+  color: black;
+  background-color: rgb(114, 179, 244);
+  color: white;
+  font-weight: bold;
   cursor: pointer;
+}
+
+.input-button:hover {
+  background-color: #007bff;
 }
 
 .faq-question {
@@ -67,4 +74,16 @@ body {
 
 .color-text {
   color: rgb(114, 179, 244);
+}
+
+.blue {
+  background-color: rgb(114, 179, 244);
+}
+
+.input-section-button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin: 1px;
+  margin-bottom: 5px;
 }
