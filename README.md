@@ -4,6 +4,8 @@ It allows users to search for frequently asked questions (FAQs) using a multilin
 
 _This project is done as a part of **Human Language Technologies** elective course._
 
+## [Demo](https://youtu.be/4kJYUkWfp04?feature=shared)
+
 ## Problem Statement
 
 Many companies often receive a large number of similar questions from their clients. Manually answering these questions can be time-consuming and inefficient. Similarly, it can be time-consuming for users to search through a long list of FAQs. Therefore, there is a need for an automated system that can quickly provide relevant answers to user queries.
